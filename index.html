@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dan8 Pixel Maker!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="labels"> Dan's Pixel Grid</h1>
+
+    <h2> <U> Choose Grid Size </U> </h2>
+
+    <form id="sizePicker">
+        Height:
+        <input type="number" id="inputHeight" name="height" min="1" value="1" >
+         / 
+        Width:
+        <input type="number" id="inputWidth" name="width" min="1" value="1" >
+        <BR>
+        <BR>
+        <input type="submit" value="Make grid" STYLE="background-color:#00FF00" >
+    </form>
+    
+
+    <h2>
+        <MARK>
+        Pick A Color 
+        </MARK>
+    </h2> 
+    <input type="color" id="colorPicker" >
+
+
+    <h2>Design Canvas</h2>
+    <table id="pixelCanvas">
+    <tbody id="gridBod">
+
+    </table>
+
+
+    <FORM ID=choices>
+        <P>
+            <INPUT TYPE=BUTTON VALUE="tic-tac-toe" 
+                onClick="inputHeight.value=3;   inputWidth.value=3;"   >
+            <INPUT TYPE=BUTTON VALUE="Chess  "
+                onClick="inputHeight.value=8;   inputWidth.value=8;"   >
+            <BR>
+            <INPUT TYPE=BUTTON VALUE="SuDuKo  "
+                onClick="inputHeight.value=9;   inputWidth.value=9;"   >
+            <INPUT TYPE=BUTTON VALUE="football"
+                onClick="inputHeight.value=5;   inputWidth.value=10;"   > <BR>
+            <INPUT TYPE=BUTTON VALUE="random"
+                onClick=" inputHeight.value= 1 + Math.floor(20*Math.random());   
+                    inputWidth.value= 1 + Math.floor(20*Math.random());"   >
+        </P>
+    </FORM>
+
+    <DIV ID=diagnostics> . </DIV>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script src="designs.js"></script>
+
+</body>
+</html>
